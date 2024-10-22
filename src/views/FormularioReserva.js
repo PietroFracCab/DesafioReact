@@ -1,5 +1,6 @@
 // src/views/FormularioReserva.js
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 import ReservaController from '../controllers/ReservaController';
 
 const reservaController = new ReservaController();
@@ -23,7 +24,8 @@ const FormularioReserva = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     reservaController.adicionarReserva(formData);
-    console.log(reservaController.obterReservas());
+    console.log('Cadastro realizado:', formData);
+    alert('Cadastro realizado com sucesso!');
     setFormData({
       placa: '',
       proprietario: '',
@@ -36,65 +38,72 @@ const FormularioReserva = () => {
   };
 
   return (
-    <form onSubmit={handleSubmit}>
-      <input
-        type="text"
-        name="placa"
-        placeholder="Placa do veículo"
-        value={formData.placa}
-        onChange={handleChange}
-        required
-      />
-      <input
-        type="text"
-        name="proprietario"
-        placeholder="Nome do proprietário"
-        value={formData.proprietario}
-        onChange={handleChange}
-        required
-      />
-      <input
-        type="text"
-        name="numeroApartamento"
-        placeholder="Número do apartamento"
-        value={formData.numeroApartamento}
-        onChange={handleChange}
-        required
-      />
-      <input
-        type="text"
-        name="bloco"
-        placeholder="Bloco do apartamento"
-        value={formData.bloco}
-        onChange={handleChange}
-        required
-      />
-      <input
-        type="text"
-        name="modelo"
-        placeholder="Modelo do veículo"
-        value={formData.modelo}
-        onChange={handleChange}
-        required
-      />
-      <input
-        type="text"
-        name="cor"
-        placeholder="Cor do veículo"
-        value={formData.cor}
-        onChange={handleChange}
-        required
-      />
-      <input
-        type="text"
-        name="numeroVaga"
-        placeholder="Número da vaga de estacionamento"
-        value={formData.numeroVaga}
-        onChange={handleChange}
-        required
-      />
-      <button type="submit">Salvar Reserva</button>
-    </form>
+    <div>
+      <h1>Cadastro de Reserva</h1>
+      <div className="nav-buttons">
+        <Link to="/"><button>Cadastro de Reserva</button></Link>
+        <Link to="/vagas"><button>Lista de Vagas</button></Link>
+      </div>
+      <form onSubmit={handleSubmit}>
+        <input
+          type="text"
+          name="placa"
+          placeholder="Placa do veículo"
+          value={formData.placa}
+          onChange={handleChange}
+          required
+        />
+        <input
+          type="text"
+          name="proprietario"
+          placeholder="Nome do proprietário"
+          value={formData.proprietario}
+          onChange={handleChange}
+          required
+        />
+        <input
+          type="text"
+          name="numeroApartamento"
+          placeholder="Número do apartamento"
+          value={formData.numeroApartamento}
+          onChange={handleChange}
+          required
+        />
+        <input
+          type="text"
+          name="bloco"
+          placeholder="Bloco do apartamento"
+          value={formData.bloco}
+          onChange={handleChange}
+          required
+        />
+        <input
+          type="text"
+          name="modelo"
+          placeholder="Modelo do veículo"
+          value={formData.modelo}
+          onChange={handleChange}
+          required
+        />
+        <input
+          type="text"
+          name="cor"
+          placeholder="Cor do veículo"
+          value={formData.cor}
+          onChange={handleChange}
+          required
+        />
+        <input
+          type="text"
+          name="numeroVaga"
+          placeholder="Número da vaga de estacionamento"
+          value={formData.numeroVaga}
+          onChange={handleChange}
+          required
+        />
+        <button type="submit">Salvar Reserva</button>
+      </form>
+    </div>
   );
 };
 
