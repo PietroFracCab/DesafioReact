@@ -26,10 +26,6 @@ const ListaVagas = () => {
   return (
     <div>
       <h1>Lista de Vagas de Estacionamento</h1>
-      <div className="nav-buttons">
-        <Link to="/"><button>Cadastro de Reserva</button></Link>
-        <Link to="/vagas"><button>Lista de Vagas</button></Link>
-      </div>
       <div className="listas-vagas">
         <ul>
           {primeiraMetade.map((vaga) => (

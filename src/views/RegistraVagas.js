@@ -40,10 +40,6 @@ const FormularioReserva = () => {
   return (
     <div>
       <h1>Cadastro de Reserva</h1>
-      <div className="nav-buttons">
-        <Link to="/"><button>Cadastro de Reserva</button></Link>
-        <Link to="/vagas"><button>Lista de Vagas</button></Link>
-      </div>
       <form onSubmit={handleSubmit}>
         <input
           type="text"
