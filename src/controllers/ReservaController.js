@@ -3,15 +3,15 @@ import ReservaModel from '../models/ReservaModel';
 
 class ReservaController {
   constructor() {
-    this.vagas = Array.from({ length: 50 }, (_, index) => ({
+    this.vagas = Array.from({ length: 20 }, (_, index) => ({
       numero: index + 1,
       status: 'Disponível',
       reserva: null
     }));
 
     // Simular que as vagas 10 e 25 estão ocupadas
-    this.vagas[9].status = 'Ocupada';
-    this.vagas[9].reserva = new ReservaModel(
+    this.vagas[5].status = 'Ocupada';
+    this.vagas[5].reserva = new ReservaModel(
       'ABC-1234',
       'João Silva',
       '101',
@@ -21,8 +21,8 @@ class ReservaController {
       '10'
     );
 
-    this.vagas[24].status = 'Ocupada';
-    this.vagas[24].reserva = new ReservaModel(
+    this.vagas[18].status = 'Ocupada';
+    this.vagas[18].reserva = new ReservaModel(
       'XYZ-5678',
       'Maria Oliveira',
       '202',

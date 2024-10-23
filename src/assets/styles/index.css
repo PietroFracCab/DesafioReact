@@ -55,6 +55,33 @@ h1 {
 .listas-vagas ul {
   list-style-type: none;
   padding: 0;
+  width: 45%;
+  background-color: #e0e0e0;
+  border-radius: 8px;
+  padding: 10px;
+}
+
+.listas-vagas li {
+  margin-bottom: 10px;
+  padding: 10px;
+  background-color: #ffffff;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.listas-vagas button {
+  margin-left: 10px;
+  padding: 5px 10px;
+  font-size: 14px;
+  background-color: #ff4d4d;
+  color: white;
+  border: none;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+.listas-vagas button:hover {
+  background-color: #cc0000;
 }
 
 form {
