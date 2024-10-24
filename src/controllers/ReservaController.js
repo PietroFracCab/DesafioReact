@@ -16,9 +16,9 @@ class ReservaController {
       'João Silva',
       '101',
       'A',
-      'Carro Modelo 1',
+      'Corsa',
       'Azul',
-      '10'
+      '6'
     );
 
     this.vagas[9].status = 'Ocupada';
@@ -27,9 +27,9 @@ class ReservaController {
       'Maria Oliveira',
       '202',
       'B',
-      'Carro Modelo 2',
-      'Vermelho',
-      '25'
+      'Hilux',
+      'Branca',
+      '9'
     );
   }
 
