@@ -1,5 +1,5 @@
+// src/views/ListaVagas.js
 import React, { useState, useEffect } from 'react';
-import { Link } from 'react-router-dom';
 import ReservaController from '../controllers/ReservaController';
 
 const reservaController = new ReservaController();
@@ -15,7 +15,7 @@ const ListaVagas = () => {
     const confirmacao = window.confirm(`Você realmente deseja remover a reserva da vaga ${numeroVaga}?`);
     if (confirmacao) {
       reservaController.removerReserva(numeroVaga);
-      setVagas(reservaController.obterReservas());
+      setVagas([...reservaController.obterReservas()]);
     }
   };
 

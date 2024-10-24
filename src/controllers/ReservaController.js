@@ -9,7 +9,7 @@ class ReservaController {
       reserva: null
     }));
 
-    // Simular que as vagas 10 e 25 estão ocupadas
+    // Simular que as vagas 5 e 9 estão ocupadas
     this.vagas[5].status = 'Ocupada';
     this.vagas[5].reserva = new ReservaModel(
       'ABC-1234',
@@ -21,8 +21,8 @@ class ReservaController {
       '10'
     );
 
-    this.vagas[18].status = 'Ocupada';
-    this.vagas[18].reserva = new ReservaModel(
+    this.vagas[9].status = 'Ocupada';
+    this.vagas[9].reserva = new ReservaModel(
       'XYZ-5678',
       'Maria Oliveira',
       '202',
@@ -54,7 +54,7 @@ class ReservaController {
   }
 
   removerReserva(numeroVaga) {
-    const vaga = this.vagas.find(v => v.numero === numeroVaga);
+    const vaga = this.vagas.find(v => v.numero === parseInt(numeroVaga));
     if (vaga && vaga.status === 'Ocupada') {
       vaga.status = 'Disponível';
       vaga.reserva = null;
